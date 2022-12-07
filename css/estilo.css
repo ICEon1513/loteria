@@ -1,0 +1,56 @@
+:root {
+  --ficha-juego: url('../imagenes/maiz.png');
+  --color-blanco: hsl(0, 100%, 100%);
+  --color-negro: hsl(0,100%,0%);
+  --color-fondo-base: #FEFEFE;
+  --color-letra-base: #2c2c2c;
+  --color-letra-secundario: #235b4e;
+  --color-letra-alterno: #4395a7;
+  --color-resaltar: #c31a1a;
+  --color-resaltar-alterno: #7300ffe1;
+  --color-gris-light: #f3f3f3ad;
+  --color-gris-normal: #dfdfdf80;
+  --color-gris-dark: #c2c2c270;
+  --color-gris-darker: #c2c2c2;
+  --color-gris-sombra: #89a6bf7a;
+  --color-gris-sombra-opuesto: #ffffffcc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+div {
+  max-width: 600px;
+  max-height: 80vh;
+}
+
+#carta {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.carta {
+  width: 100px;
+  height: 167px;
+  background-size: cover;
+}
+
+.marcado {
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+
+.seleccionado {
+  background-image: var(--ficha-juego);
+  background-position: center center;
+  background-repeat: no-repeat;
+}

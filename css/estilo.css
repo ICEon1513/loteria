@@ -2,6 +2,21 @@
   --ficha-juego: url('../imagenes/maiz.png');
   --color-blanco: hsl(0, 100%, 100%);
   --color-negro: hsl(0,100%,0%);
+  --color-azul: hsl(191,99%,39%);
+  --color-amarillo: hsl(37,94%,59%);
+  --color-morado: hsl(331,42%,41%);
+  --color-rojo: hsl(356,59%,43%);
+  --color-verde: hsl(144,43%,22%);
+
+  --color-rojo-mexico: #EE2743;
+  --color-rosa-mexico: #EC1981;
+  --color-amarillo-mexico: #EEB527;
+  --color-morado-mexico: #AC2484;
+  --color-verde-mexico: #84C441;
+  --color-azul-mexico: #00ABBD;
+
+
+
   --color-fondo-base: #FEFEFE;
   --color-letra-base: #2c2c2c;
   --color-letra-secundario: #235b4e;

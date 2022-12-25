@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/estilo_.css">
+  <style>
+    #modal-revisionall {
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--color-gris-darkest);
+      position: fixed;
+      top: 0;
+      left: 0;
+      text-align: center;
+      display: none;
+    }
+
+    #modal-revisionall h2 {
+      color: var(--color-fondo-base);
+      text-shadow: 4px 3px 1px var(--color-fondo-base-inv);
+      margin-top: 10px;
+      font-size: 2em;
+    }
+
+    #resultadol {
+      font-size: 3em;
+      text-shadow: 4px 3px 1px var(--color-fondo-base-inv);
+    }
+
+    #resultadol i {
+      margin: 10px;
+      
+    }
+
+    #resultadoy {
+      color: var(--color-verde-mexico);
+      display: none;
+    }
+
+    #resultadon {
+      color: var(--color-rojo-mexico);
+      display: none;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="modal-revisionall">
+		<h2 id="quien">Pepe</h2>
+		<h2>Cantó 'LOTERIA'</h2>
+		<h2>Revisando</h2>
+		<span id="resultadol"><i id="resultadoy" class="fa-regular fa-circle-check"></i><i id="resultadon" class="fa-regular fa-circle-xmark"></i></span>
+	</div>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    
+  });
+
+</script>
+
+</html>

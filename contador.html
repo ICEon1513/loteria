@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/estilo_.css">
+  <style>
+    #modal-conteo {
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--color-gris-darkest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #contador {
+      font-size: 10em;
+      color: #FEFEFE;
+      text-shadow: 4px 3px 1px var(--color-negro);
+
+    }
+
+    .animar_conteo {
+      animation: 1s normal 3 conteo;
+    }
+
+    @keyframes conteo {
+      form {
+        font-size: 100%;
+      }
+
+      to {
+        font-size: 0%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="modal-conteo">
+    <span id="contador">3</span>
+  </div>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    
+    let timePassed = 0;
+    const TIME_LIMIT = 3;
+    let timeLeft = TIME_LIMIT;
+    let timerInterval = null;
+
+    const contador = document.getElementById('contador');
+    contador.addEventListener('click', () => {
+      contador.classList.add('animar_conteo');
+      timerInterval = setInterval(()=>{
+        timePassed = timePassed+=1;
+        timeLeft = TIME_LIMIT - timePassed;
+        contador.innerHTML = timeLeft;
+        if(timeLeft === 0) {
+          contador.innerHTML = "";
+          clearInterval(timerInterval);
+          contador.classList.remove('animar_conteo');
+        }
+      }, 900);
+
+    });
+  });
+
+</script>
+
+</html>

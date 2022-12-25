@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/estilo_.css">
+  <style>
+    #modal-seleccion {
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--color-gris-darkest);
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    #seleccion_instrucciones {
+      color: var(--color-fondo-base);
+      text-shadow: 2px 2px 2px var(--color-fondo-base-inv);
+      font-size: 1.3em;
+      user-select: none;
+      width: 80%;
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    #contenedor-seleccion {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #listado_seleccion {
+      width: 260px;
+      list-style: none;
+      overflow-y: scroll;
+      max-height: 75vh;
+    }
+
+     #listado_seleccion::-webkit-scrollbar {
+      display: none;
+    }
+
+    #listado_seleccion {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .item_carta {
+      display: inline-block;
+      width: 120px;
+      height: 200px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 5px;
+      border: 1px solid black;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div id="modal-seleccion">
+    <h3 id="seleccion_instrucciones">Selecciona la carta de tu preferencia</h3>
+    <div id="contenedor-seleccion">
+      <ul id="listado_seleccion">
+
+      </ul>
+    </div>
+  </div>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    let baraja = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54];
+    let carton_revisar = [];
+    baraja.sort(() => Math.random() - 0.5);
+    carton_revisar = baraja.slice(0, 12);
+    console.log(carton_revisar);
+    presentar_seleccion(carton_revisar);
+
+    function seleccionar_carta () {
+      
+    }
+    function presentar_seleccion(carton) {
+      for (let x = 1; x <= baraja.length; x++) {
+        let item_seleccion = Object.assign(document.createElement('li'), {
+          className: 'item_carta',
+          style : 
+          "background-image: url(imagenes/" + x +".jpg);"          
+        });
+        item_seleccion.dataset.numero = x;
+        item_seleccion.addEventListener('click', seleccionar_carta);
+        
+        for(let y = 0; y < carton.length; y++)
+        {
+          if (x == carton[y]) {
+            item_seleccion.style.filter = "grayscale(1)";
+            item_seleccion.removeEventListener('click', seleccionar_carta);
+          }
+        }        
+        document.getElementById('listado_seleccion').append(item_seleccion);
+        console.log(item_seleccion);
+      }
+      
+    }
+  });
+
+</script>
+
+</html>

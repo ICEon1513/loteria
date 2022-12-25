@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/estilo_.css">
+  <style>
+    #modal-revision {
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--color-gris-darkest);
+      position: fixed;
+      top: 0;
+      left: 0;
+      text-align: center;
+      display: none;
+    }
+
+    #modal-revision h2 {
+      color: var(--color-fondo-base);
+      text-shadow: 4px 3px 1px var(--color-fondo-base-inv);
+      margin-top: 10px;
+      margin-bottom: 40px;
+      font-size: 2em;
+    }
+
+    #resultadolot {
+      font-size: 3em;
+      text-shadow: 4px 3px 1px var(--color-fondo-base-inv);
+    }
+
+    #resultadolot i {
+      margin: 10px;
+
+    }
+
+    #resultadosi {
+      color: var(--color-verde-mexico);
+      display: none;
+    }
+
+    #resultadono {
+      color: var(--color-rojo-mexico);
+      display: none;
+    }
+
+    #modal-revision span {
+      text-shadow: 4px 3px 1px var(--color-fondo-base-inv);
+      font-size: 3em;
+      display: inline-block;
+    }
+
+    
+
+    .animar-letras {
+      animation: wave-text 1s ease-in-out infinite;
+    }
+
+    #l1.animar-letras {
+      color: var(--color-rojo-mexico);
+      animation-delay: 0.0s;
+    }
+
+    #l2.animar-letras {
+      color: var( --color-verde-mexico);
+      animation-delay: 0.1s;
+    }
+
+    #l3.animar-letras {
+      color: var(--color-azul-mexico);
+      animation-delay: 0.2s;
+    }
+
+    #l4.animar-letras {
+      color: var(--color-rosa-mexico);
+      animation-delay: 0.3s;
+    }
+
+    #l5.animar-letras {
+      color: var(--color-amarillo-mexico);
+      animation-delay: 0.4s;
+    }
+    #l6.animar-letras {
+      color: var(--color-morado-mexico);
+      animation-delay: 0.5s;
+    }
+    #l7.animar-letras {
+      color: var(--color-rojo-mexico);
+      animation-delay: 0.6s;
+    }
+
+    @keyframes wave-text {
+      0% {
+        transform: translateY(0em);
+      }
+
+      60% {
+        transform: translateY(-0.6em);
+      }
+
+      100% {
+        transform: translateY(0em);
+      }
+    }
+
+    #modal-revision span.letras {
+      color: var(--color-fondo-base);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="modal-revision">
+    <h2>Cantaste</h2>
+    <span id="l1" class="letras">L</span>
+    <span id="l2" class="letras">O</span>
+    <span id="l3" class="letras">T</span>
+    <span id="l4" class="letras">E</span>
+    <span id="l5" class="letras">R</span>
+    <span id="l6" class="letras">I</span>
+    <span id="l7" class="letras">A</span>
+
+    <span id="resultadolot"><i id="resultadosi" class="fa-regular fa-circle-check"></i><i id="resultadono"
+        class="fa-regular fa-circle-xmark"></i></span>
+  </div>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+
+  });
+
+</script>
+
+</html>
